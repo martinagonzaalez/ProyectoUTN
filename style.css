@@ -1,0 +1,17 @@
+.general {
+    text-align: center;
+    background-color: grey;
+    margin: 2%;
+}
+
+h1, h2, h3, h4 {
+    color: azure;
+}
+
+li, p {
+    color: antiquewhite;
+}
+
+a{
+    color: #234ba7;
+}
