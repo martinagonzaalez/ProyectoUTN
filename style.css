@@ -1,7 +1,8 @@
 .general {
     text-align: center;
-    background-color: grey;
+    background: linear-gradient(to bottom, #7d7e7d 0%,#0e0e0e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     margin: 2%;
+    font-family: "Playfair Display", serif;
 }
 
 h1, h2, h3, h4 {
@@ -10,8 +11,14 @@ h1, h2, h3, h4 {
 
 li, p {
     color: antiquewhite;
+    margin: 5px;
 }
 
 a{
     color: #234ba7;
+}
+
+hr{
+    color: #7d7e7d;
+    margin: 30px;
 }
