@@ -1,0 +1,86 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    color: white;
+    size: 300px;
+    border: 2px solid black;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.column {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    height: 400px;
+    width: 400px;
+}
+
+span {
+    flex-grow: 1;
+    aspect-ratio: 1 / 1;
+    text-align: center;
+    align-content: center;
+}
+
+.column span:first-child {
+    background-color: red;
+}
+
+.column span:nth-child(2) {
+    background-color: blue;
+}
+
+.column span:last-child {
+    background-color: green;
+}
+
+.middle {
+    height: 400px;
+    width: 400px;
+    flex-direction: row-reverse;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+.middle span:first-child {
+    background-color: red;
+}
+
+.middle span:nth-child(2) {
+    background-color: blue;
+}
+
+.middle span:last-child {
+    background-color: green;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.row span:first-child {
+    flex-grow: 0;
+    height: 200px;
+    background-color: red;
+}
+
+.row span:nth-child(2) {
+    flex-grow: 0;
+    height: 200px;
+    background-color: blue;
+}
+
+.row span:last-child {
+    flex-grow: 0;
+    height: 200px;
+    background-color: green;
+}
