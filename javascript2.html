@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios JavaScript</title>
+
+    
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .square {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 10px;
+            cursor: pointer;
+        }
+        #red { background-color: red; }
+        #green { background-color: green; }
+        #blue { background-color: blue; }
+        textarea {
+            width: 300px;
+            height: 100px;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ejercicios JavaScript</h1>
+    
+    <h2>Ejercicio 1: Cambiar color de fondo</h2>
+    <div class="container">
+        <div class="square" id="red"></div>
+        <div class="square" id="green"></div>
+        <div class="square" id="blue"></div>
+    </div>
+    
+    <h2>Ejercicio 2: Contador de caracteres</h2>
+    <textarea id="texto"></textarea>
+    <p>Caracteres: <span id="contador">0</span></p>
+    
+    <h2>Ejercicio 3: Alumnos aprobados</h2>
+    <button onclick="filtrarAprobados()">Mostrar aprobados</button>
+    <ul id="listaAprobados"></ul>
+    
+    <script>
+        // Ejercicio 1: Cambio de color de fondo
+        document.getElementById("red").addEventListener("click", function() {
+            document.body.style.backgroundColor = "red";
+        });
+        document.getElementById("green").addEventListener("click", function() {
+            document.body.style.backgroundColor = "green";
+        });
+        document.getElementById("blue").addEventListener("click", function() {
+            document.body.style.backgroundColor = "blue";
+        });
+        
+        // Ejercicio 2: Contador de caracteres
+        document.getElementById("texto").addEventListener("input", function() {
+            document.getElementById("contador").textContent = this.value.length;
+        });
+        
+        // Ejercicio 3: Filtrar alumnos aprobados
+        var alumnos = [
+            { nombre: 'Juan Gomez', nota: 7 },
+            { nombre: 'Pedro Rodriguez', nota: 4 },
+            { nombre: 'Roxana García', nota: 8 },
+            { nombre: 'Luciano Lopez', nota: 5 },
+            { nombre: 'Fernanda Gimenez', nota: 6 },
+            { nombre: 'Florencia Martinez', nota: 10 },
+            { nombre: 'Raul Sanchez', nota: 7 },
+            { nombre: 'Sandra Figueroa', nota: 8 }
+        ];
+        
+        function filtrarAprobados() {
+            var aprobados = alumnos.filter(alumno => alumno.nota >= 7);
+            var lista = document.getElementById("listaAprobados");
+            lista.innerHTML = ""; // Limpiar lista antes de agregar
+            aprobados.forEach(alumno => {
+                var li = document.createElement("li");
+                li.textContent = alumno.nombre + " - Nota: " + alumno.nota;
+                lista.appendChild(li);
+            });
+        }
+    </script>
+</body>
+</html>
